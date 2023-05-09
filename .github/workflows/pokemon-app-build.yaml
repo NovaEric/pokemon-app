@@ -37,9 +37,9 @@ jobs:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          npm install --global yarn
-          yarn build
-          yarn dev
+          npm install
+          npm run build
+          npm run dev
 
 # Please do not touch the following action
       - name: Store deployment content
