@@ -4,7 +4,8 @@
 
 ## Check it out in the link below 
 
-### https://pokemon-app-alpha-lac.vercel.app/
+### [https://pokemon-app-alpha-lac.vercel.app/](https://pokemon-app-novaeric.vercel.app/)
+### 
 
 
 
