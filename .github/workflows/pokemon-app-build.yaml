@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: public
+  DEPLOYMENT_FOLDER: ./public
 
 jobs:
 # Please do not rename this job
@@ -38,8 +38,8 @@ jobs:
           SITE_URL: ${{ inputs.site-url }}
         run: |
           npm install --global yarn
-          yarn install --frozen-lockfile
           yarn build
+          yarn dev
 
 # Please do not touch the following action
       - name: Store deployment content
@@ -47,7 +47,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-us.ionos.space
-          project-id: e578fc4b-2dde-400b-ac3a-73454b143efe
+          project-id: b4d38c13-c82c-4f7f-bed6-912246fa2072
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
